@@ -49,7 +49,7 @@ document.addEventListener("click", (event) => {
 })
 
     return (
-        <nav id="mobile-nav"  className="mobile-navbar w-0 md:hidden h-screen z-20 fixed right-0 bg-gradient-to-r from-gray-100 via-gray-200 to-gray-100 dark:bg-gradient-to-r dark:from-slate-600 dark:via-slate-500 dark:to-slate-700 text-lg font-bold transition-all duration-5000 ease-in-out">
+        <nav id="mobile-nav" className="mobile-navbar w-0 md:hidden h-screen z-20 fixed right-0 bg-gradient-to-r from-gray-100 via-gray-200 to-gray-100 dark:bg-gradient-to-r dark:from-slate-600 dark:via-slate-500 dark:to-slate-700 text-lg font-bold transition-all duration-5000 ease-in-out">
 
       {/* <!-- open nav sign --> */}
       <svg className="open-sign w-auto mr-3 py-4 fixed right-0" width="100" height="60" viewBox="0 0 26 18" fill="none" xmlns="">

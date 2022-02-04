@@ -32,10 +32,12 @@ const Navbar = () => {
         duration-200
         ease-in-out
       `}>
+
     {/* <!-- Logo would look great below --> */}
-    <div className={`${scroll ? "text-slate-200":"text-slate-900"} logo text-lg font-bold cursor-pointer hover:text-red-900`}>
+    <div className={`${scroll ? "text-slate-200":"text-slate-900"} logo text-lg font-bold cursor-pointer hover:text-green-500`}>
       <h1>Ahmed.Zahid</h1>
     </div>
+        
     {/* <!-- nav elements below --> */}
     <nav className="hidden md:flex space-x-12 items-center">
       <a className="hover:text-green-600" href="#home">Home</a>
