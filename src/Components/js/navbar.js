@@ -1,34 +1,21 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 
 const Navbar = () => {
 
-  const [navTransparent, setNavTransparent] = useState(0)
-  function changeColor() {
-    return setNavTransparent((navColor) => {
-      if (document.body.scrollTop >= 200 || document.documentElement.scrollTop >= 200 ) {
-        return console.log("Scroll is more than 200px", navTransparent)
-      } else {
-        return console.log("Scroll is less than 200px", navTransparent)
-    }
-    })
-  }
+  const [scroll, setScroll] = useState(false)
 
-// const myNav = document.getElementById('navbar');
-// window.onScroll = function () { 
-//     // "use strict";
-//    if (document.body.scrollTop >= 200 || document.documentElement.scrollTop >= 200 ) {
-//         myNav.classList.add("bg-gray-200", "dark:bg-slate-700");
-//         myNav.classList.remove("bg-transparent", "hover:bg-gray-200");
-//     } 
-//     else {
-//         myNav.classList.add("bg-transparent", "hover:bg-gray-200");
-//         myNav.classList.remove("bg-gray-200");
-//     }
-// // };
+  useEffect(() => {
+    document.addEventListener("scroll", () => {
+      const scrollCheck = window.scrollY >= 200
+      if (scrollCheck !== scroll) {
+        setScroll(scrollCheck)
+      }
+    })
+  })
 
     return (
-      <header onScroll={changeColor} id="navbar" className={`
-        ${document.body.scrollTop >= 200 || document.documentElement.scrollTop >= 200 ? "bg-gradient-to-r from-gray-100 via-gray-200 to-gray-100 dark:bg-gradient-to-r dark:from-slate-600 dark:via-slate-500 dark:to-slate-700": "bg-transparent hover:bg-gradient-to-r hover:from-gray-100 hover:via-gray-200 hover:to-gray-100 hover:dark:bg-gradient-to-r hover:dark:from-slate-600 hover:dark:via-slate-500 hover:dark:to-slate-700" }
+      <header id="navbar" className={`
+        ${scroll ? "bg-gradient-to-r from-gray-100 via-gray-200 to-gray-100 dark:bg-gradient-to-r dark:from-slate-600 dark:via-slate-500 dark:to-slate-700": "bg-transparent hover:bg-gradient-to-r hover:from-gray-100 hover:via-gray-200 hover:to-gray-100 hover:dark:bg-gradient-to-r hover:dark:from-slate-600 hover:dark:via-slate-500 hover:dark:to-slate-700" }
         fixed
         flex flex-wrap
         md:flex-nowrap
@@ -47,7 +34,7 @@ const Navbar = () => {
         ease-in-out
       `}>
     {/* <!-- Logo would look great below --> */}
-    <div className="logo text-lg font-bold cursor-pointer hover:text-red-900">
+    <div className={`${scroll ? "text-slate-200":"text-slate-900"} logo text-lg font-bold cursor-pointer hover:text-red-900`}>
       <h1>Ahmed.Zahid</h1>
     </div>
     {/* <!-- nav elements below --> */}
