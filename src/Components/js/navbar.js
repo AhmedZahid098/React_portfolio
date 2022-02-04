@@ -45,21 +45,20 @@ const Navbar = () => {
       <a className="hover:text-green-600" href="#projects">Projects</a>
       <a className="hover:text-green-600" href="#client">Client</a>
       <a href="#hire-me">
-        <button className="
-              sm:text-sm
-              font-bold
-              px-4
-              py-2
-              bg-gray-300
-              dark:bg-gray-900
-              rounded-lg
-              border-solid border-2 border-white
-              hover:bg-white hover:text-green-500 hover:tranition-all
-              duration-300
-              ease-in-out
-            ">
-          Hire me
-        </button>
+      <button className="
+            sm:text-sm
+            font-bold
+            px-4
+            py-2
+            bg-gray-300
+            dark:bg-gray-900
+            rounded-lg
+            border-solid border-2 border-white
+            hover:bg-white hover:text-green-500 hover:tranition-all
+            duration-300
+            ease-in-out">
+        Hire me
+      </button>
       </a>
     </nav>
 </header>
