@@ -16,10 +16,7 @@ html,
 body {
   scroll-behavior: smooth;
 }
-html,
-body {
-  scroll-behavior: smooth;
-}
+
 p {
   display: -webkit-box;
   -webkit-line-clamp: 10;

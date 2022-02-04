@@ -6,8 +6,6 @@ import MobileNav from './Components/js/mobileNav';
 import Navbar from './Components/js/navbar';
 import Services from './Components/js/services';
 import FetchData from './Components/js/fetchData';
-import React from 'react';
-import ReactDOM from 'react-dom';
 
 
 function App() {
