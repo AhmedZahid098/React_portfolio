@@ -14,8 +14,7 @@ const Navbar = () => {
   })
 
     return (
-      <header id="navbar" className={`
-        ${scroll ? "bg-gradient-to-r from-gray-100 via-gray-200 to-gray-100 dark:bg-gradient-to-r dark:from-slate-600 dark:via-slate-500 dark:to-slate-700": "bg-transparent hover:bg-gradient-to-r hover:from-gray-100 hover:via-gray-200 hover:to-gray-100 hover:dark:bg-gradient-to-r hover:dark:from-slate-600 hover:dark:via-slate-500 hover:dark:to-slate-700" }
+      <header id="navbar" className={`${scroll ? "bg-gradient-to-r from-gray-100 via-gray-200 to-gray-100 dark:bg-gradient-to-r dark:from-slate-600 dark:via-slate-500 dark:to-slate-700": "bg-transparent hover:bg-gradient-to-r hover:from-gray-100 hover:via-gray-200 hover:to-gray-100 hover:dark:bg-gradient-to-r hover:dark:from-slate-600 hover:dark:via-slate-500 hover:dark:to-slate-700" }
         fixed
         flex flex-wrap
         md:flex-nowrap
